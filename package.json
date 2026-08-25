@@ -1,0 +1,35 @@
+{
+  "name": "attar-alhaj-ali",
+  "version": "1.0.0",
+  "description": "برنامج عطارة الحاج علي - بيع بالجنيه",
+  "main": "main.js",
+  "author": "محمد عبدالحفيظ",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.mohamedabdelhafiz.attaralhajali",
+    "productName": "عطارة الحاج علي",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
